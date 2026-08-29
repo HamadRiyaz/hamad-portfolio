@@ -27,12 +27,6 @@ function initHeader() {
 
   nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
 
-  document.addEventListener('click', (e) => {
-    if (nav.classList.contains('is-open') && !header.contains(e.target)) {
-      closeNav();
-    }
-  });
-
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeNav();
   });
