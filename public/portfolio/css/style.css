@@ -1284,3 +1284,82 @@ filter: saturate(1.02) contrast(1.02);
   }
 
 }
+
+/* AI project repository lists */
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0;
+  display: grid;
+  gap: 8px;
+}
+
+.project-list li {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transition: border-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.project-list li:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.project-list a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.project-list a:hover {
+  color: var(--primary);
+}
+
+.project-list a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.project__body h4 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+/* AI project list */
+.project-toggle {
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.project-list {
+  margin: 16px 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid var(--border, rgba(128, 128, 128, 0.25));
+  list-style: none;
+}
+
+.project-list[hidden] {
+  display: none;
+}
+
+.project-list li + li {
+  margin-top: 10px;
+}
+
+.project-list a {
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-list a:hover {
+  color: var(--accent, #35d6e6);
+}
